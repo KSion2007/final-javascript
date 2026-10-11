@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Accessible Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body onload="initGallery()">
+
+  <header>
+    <h1>Nature &amp; Architecture Gallery</h1>
+    <p>Hover over or tab through the preview images below to display them in the viewer.</p>
+  </header>
+
+  <main>
+    <!-- Featured display element -->
+    <div id="image" role="region" aria-live="polite" aria-label="Selected image preview">
+      Hover over or focus on an image below to display here.
+    </div>
+
+    <!-- Gallery thumbnails -->
+    <section class="gallery" aria-label="Photo thumbnails">
+      <img class="preview" 
+           src="https://picsum.photos/id/1015/600/400" 
+           alt="River running through a rocky mountain valley"
+           onmouseover="upDate(this)" 
+           onmouseleave="unDo()"
+           onfocus="upDate(this)" 
+           onblur="unDo()">
+
+      <img class="preview" 
+           src="https://picsum.photos/id/1018/600/400" 
+           alt="Misty evergreen forest at the base of sharp cliffs"
+           onmouseover="upDate(this)" 
+           onmouseleave="unDo()"
+           onfocus="upDate(this)" 
+           onblur="unDo()">
+
+      <img class="preview" 
+           src="https://picsum.photos/id/1025/600/400" 
+           alt="Pug wrapped warmly in a blanket"
+           onmouseover="upDate(this)" 
+           onmouseleave="unDo()"
+           onfocus="upDate(this)" 
+           onblur="unDo()">
+
+      <img class="preview" 
+           src="https://picsum.photos/id/1036/600/400" 
+           alt="Fog rolling over forested hills during sunset"
+           onmouseover="upDate(this)" 
+           onmouseleave="unDo()"
+           onfocus="upDate(this)" 
+           onblur="unDo()">
+
+      <img class="preview" 
+           src="https://picsum.photos/id/1040/600/400" 
+           alt="Historic stone castle nestled on a hillside"
+           onmouseover="upDate(this)" 
+           onmouseleave="unDo()"
+           onfocus="upDate(this)" 
+           onblur="unDo()">
+
+      <img class="preview" 
+           src="https://picsum.photos/id/1050/600/400" 
+           alt="Sunbeams breaking through low coastal storm clouds"
+           onmouseover="upDate(this)" 
+           onmouseleave="unDo()"
+           onfocus="upDate(this)" 
+           onblur="unDo()">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Accessible Interactive Gallery Project</p>
+  </footer>
+
+</body>
+</html>
